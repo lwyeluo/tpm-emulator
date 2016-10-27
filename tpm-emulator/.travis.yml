@@ -1,0 +1,10 @@
+language: c
+addons:
+  apt:
+    packages:
+     - libgmp-dev 
+     - linux-kernel-headers
+     - build-essential
+     - kernel-package
+     - libssl-dev 
+script:  mkdir -p build && cd build && cmake ../ && make && cd ..
